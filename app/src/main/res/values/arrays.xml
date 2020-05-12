@@ -22,13 +22,13 @@
         <item name="mps">@string/setting_unit_mps</item>
         <item name="kph">@string/setting_unit_kph</item>
         <item name="mph">@string/setting_unit_mph</item>
-        <item name="bft">@string/setting_unit_bft</item>
-        <item name="kn">@string/setting_unit_kn</item>
+<!--        <item name="bft">@string/setting_unit_bft</item>-->
+<!--        <item name="kn">@string/setting_unit_kn</item>-->
     </string-array>
     <string-array name="speedUnitsValues">
         <item name="mps">m/s</item>
-        <item name="kph">kph</item>
-        <item name="mph">mph</item>
+        <item name="kph">km/h</item>
+        <item name="mph">m/h</item>
         <item name="bft">bft</item>
         <item name="kn">kn</item>
     </string-array>
@@ -106,28 +106,28 @@
     </string-array>
 
     <string-array name="dateFormatsValues">
-        <item>E dd.MM.yyyy - HH:mm</item>
-        <item>dd.MM.yyyy - HH:mm</item>
-        <item>E MM/dd/yyyy - hh:mm a</item>
+<!--        <item>E dd.MM.yyyy - HH:mm</item>-->
+<!--        <item>dd.MM.yyyy - HH:mm</item>-->
         <item>EEEE, MMMM d, h:mma</item>
-        <item>MM/dd/yyyy - hh:mm a</item>
-        <item>custom</item>
+        <item>E dd/MM/yyyy - hh:mm a</item>
+        <item>dd/MM/yyyy - hh:mm a</item>
+<!--        <item>custom</item>-->
     </string-array>
 
     <string-array name="themes">
         <item name="fresh">@string/setting_theme_fresh</item>
-        <item name="classic">@string/setting_theme_classic</item>
+<!--        <item name="classic">@string/setting_theme_classic</item>-->
         <item name="dark">@string/setting_theme_dark</item>
-        <item name="black">@string/setting_theme_black</item>
-        <item name="classicdark">@string/setting_theme_classic_dark</item>
-        <item name="classicblack">@string/setting_theme_classic_black</item>
+<!--        <item name="black">@string/setting_theme_black</item>-->
+<!--        <item name="classicdark">@string/setting_theme_classic_dark</item>-->
+<!--        <item name="classicblack">@string/setting_theme_classic_black</item>-->
     </string-array>
     <string-array name="themesValues">
         <item name="fresh">fresh</item>
-        <item name="classic">classic</item>
+<!--        <item name="classic">classic</item>-->
         <item name="dark">dark</item>
-        <item name="black">black</item>
-        <item name="classicdark">classicdark</item>
-        <item name="classicblack">classicblack</item>
+<!--        <item name="black">black</item>-->
+<!--        <item name="classicdark">classicdark</item>-->
+<!--        <item name="classicblack">classicblack</item>-->
     </string-array>
 </resources>

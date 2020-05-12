@@ -15,9 +15,9 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -73,11 +73,11 @@ public class SettingsActivity extends PreferenceActivity
 
         // Set summaries to current value
         setListPreferenceSummary("unit");
-        setListPreferenceSummary("lengthUnit");
+//        setListPreferenceSummary("lengthUnit");
         setListPreferenceSummary("speedUnit");
         setListPreferenceSummary("pressureUnit");
-        setListPreferenceSummary("refreshInterval");
-        setListPreferenceSummary("windDirectionFormat");
+//        setListPreferenceSummary("refreshInterval");
+//        setListPreferenceSummary("windDirectionFormat");
         setListPreferenceSummary("theme");
     }
 

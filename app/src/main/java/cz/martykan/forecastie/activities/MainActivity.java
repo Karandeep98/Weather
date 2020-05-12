@@ -15,19 +15,20 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.TabLayout;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.textfield.TextInputLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.Toolbar;
 import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
@@ -36,6 +37,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -118,7 +120,7 @@ public class MainActivity extends BaseActivity implements LocationListener {
     private SharedPreferences prefs;
     private SharedPreferences.Editor editor;
     private LinearLayout linearLayoutTapForGraphs;
-
+    private boolean doubleBackPressed=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Initialize the associated SharedPreferences file with default values
@@ -140,7 +142,7 @@ public class MainActivity extends BaseActivity implements LocationListener {
         appView = findViewById(R.id.viewApp);
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
         AppBarLayout appBarLayout = findViewById(R.id.appBarLayout);
-
+//        getCityByLocation();
         progressDialog = new ProgressDialog(MainActivity.this);
 
         // Load toolbar
@@ -181,6 +183,7 @@ public class MainActivity extends BaseActivity implements LocationListener {
         preloadUVIndex();
         updateLastUpdateTime();
 
+
         // Set autoupdater
         AlarmReceiver.setRecurringAlarm(this);
 
@@ -218,6 +221,18 @@ public class MainActivity extends BaseActivity implements LocationListener {
             weatherRecyclerAdapter = new WeatherRecyclerAdapter(this, longTermWeather);
         }
         return weatherRecyclerAdapter;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(doubleBackPressed) {
+            super.onBackPressed();
+        }
+        else{
+            doubleBackPressed=true;
+            Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT).show();
+            new Handler().postDelayed(() -> doubleBackPressed=false, 2000);
+        }
     }
 
     @Override
@@ -702,14 +717,14 @@ public class MainActivity extends BaseActivity implements LocationListener {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_refresh) {
-            refreshWeather();
-            return true;
-        }
-        if (id == R.id.action_map) {
-            Intent intent = new Intent(MainActivity.this, MapActivity.class);
-            startActivity(intent);
-        }
+//        if (id == R.id.action_refresh) {
+//            refreshWeather();
+//            return true;
+//        }
+//        if (id == R.id.action_map) {
+//            Intent intent = new Intent(MainActivity.this, MapActivity.class);
+//            startActivity(intent);
+//        }
         if (id == R.id.action_graphs) {
             Intent intent = new Intent(MainActivity.this, GraphActivity.class);
             startActivity(intent);
@@ -727,7 +742,9 @@ public class MainActivity extends BaseActivity implements LocationListener {
             startActivity(intent);
         }
         if (id == R.id.action_about) {
-            aboutDialog();
+//            aboutDialog();
+            Intent intent = new Intent(MainActivity.this, AboutAppActivity.class);
+            startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -797,14 +814,14 @@ public class MainActivity extends BaseActivity implements LocationListener {
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION)) {
-                showLocationSettingsDialog();
-            } else {
+//            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+//                    Manifest.permission.ACCESS_FINE_LOCATION)) {
+////                showLocationSettingsDialog();
+//            } else {
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                         MY_PERMISSIONS_ACCESS_FINE_LOCATION);
-            }
+//            }
 
         } else if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER) ||
                 locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
@@ -828,9 +845,10 @@ public class MainActivity extends BaseActivity implements LocationListener {
             if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
             }
-        } else {
-            showLocationSettingsDialog();
         }
+//        else {
+//            showLocationSettingsDialog();
+//        }
     }
 
     private void showLocationSettingsDialog() {
