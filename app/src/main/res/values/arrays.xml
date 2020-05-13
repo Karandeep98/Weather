@@ -22,15 +22,15 @@
         <item name="mps">@string/setting_unit_mps</item>
         <item name="kph">@string/setting_unit_kph</item>
         <item name="mph">@string/setting_unit_mph</item>
-<!--        <item name="bft">@string/setting_unit_bft</item>-->
+        <item name="bft">@string/setting_unit_bft</item>
 <!--        <item name="kn">@string/setting_unit_kn</item>-->
     </string-array>
     <string-array name="speedUnitsValues">
         <item name="mps">m/s</item>
         <item name="kph">km/h</item>
-        <item name="mph">m/h</item>
+        <item name="mph">mi/h</item>
         <item name="bft">bft</item>
-        <item name="kn">kn</item>
+<!--        <item name="kn">kn</item>-->
     </string-array>
 
     <string-array name="pressureUnits">

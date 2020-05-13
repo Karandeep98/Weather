@@ -38,7 +38,7 @@
 
     <string name="setting_unit_mps">Meters per second (m/s)</string>
     <string name="setting_unit_kph">Kilometers per hour (km/h)</string>
-    <string name="setting_unit_mph">Miles per hour (m/h)</string>
+    <string name="setting_unit_mph">Miles per hour (mi/h)</string>
     <string name="setting_unit_bft">Beaufort wind scale (bft)</string>
     <string name="setting_unit_kn">Knots (kn)</string>
     <string name="setting_unit_Celsuis">Celsius</string>

@@ -68,10 +68,10 @@ public class UnitConvertor {
     }
 
     public static double convertWind(double wind, SharedPreferences sp) {
-        if (sp.getString("speedUnit", "m/s").equals("kph")) {
+        if (sp.getString("speedUnit", "m/s").equals("km/h")) {
             return wind * 3.6;
         }
-        else if (sp.getString("speedUnit", "m/s").equals("mph")) {
+        else if (sp.getString("speedUnit", "m/s").equals("mi/h")) {
             return wind * 2.23693629205;
         }
         else if (sp.getString("speedUnit", "m/s").equals("kn")) {
