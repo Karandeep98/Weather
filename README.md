@@ -28,6 +28,7 @@
 <img align="left"  src="https://github.com/Karandeep98/Weather/blob/master/screenshots/record4.gif" width="220" height="460"  />|
   <img src="https://github.com/Karandeep98/Weather/blob/master/screenshots/record5.gif" width="220" height="460" />|
   </p>
+  
 # Screenshots
 
 <img src="https://github.com/Karandeep98/Weather/blob/master/screenshots/Screenshot%20(252).png"  width="210">|
