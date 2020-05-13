@@ -19,8 +19,8 @@
 
 # App preview 
 <p align="center">
-<img align="left"  src="https://github.com/Karandeep98/Weather/blob/master/screenshots/record1.gif" width="210" height="460"  />|
-  <img src="https://github.com/Karandeep98/Weather/blob/master/screenshots/record2.gif" width="210" height="460" />|
+<img align="left"  src="https://github.com/Karandeep98/Weather/blob/master/screenshots/record1.gif" width="220" height="460"  />|
+  <img src="https://github.com/Karandeep98/Weather/blob/master/screenshots/record2.gif" width="220" height="460" />|
  <img align="right"  src="https://github.com/Karandeep98/COVID-19-Stats/blob/master/screenshots/preview3.gif" width="210" height="430"  />
   </p>
 
