@@ -17,6 +17,12 @@
 
 ## Download the app from [here](https://github.com/Karandeep98/Weather/raw/master/apk/weather%20app.apk).
 
+# App preview 
+<p align="center">
+<img align="left"  src="https://github.com/Karandeep98/Weather/blob/master/screenshots/record1.gif" width="210" height="430"  />|
+  <img src="https://github.com/Karandeep98/COVID-19-Stats/blob/master/screenshots/preview2.gif" width="210" height="430" />|
+ <img align="right"  src="https://github.com/Karandeep98/COVID-19-Stats/blob/master/screenshots/preview3.gif" width="210" height="430"  />
+  </p>
 
 # Screenshots
 
