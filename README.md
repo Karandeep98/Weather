@@ -26,6 +26,10 @@
 <img src="https://github.com/Karandeep98/Weather/blob/master/screenshots/Screenshot%20(257).png"  width="210">|
 <img src="https://github.com/Karandeep98/Weather/blob/master/screenshots/Screenshot%20(259).png"  width="210">|
 <img src="https://github.com/Karandeep98/Weather/blob/master/screenshots/Screenshot%20(260).png"  width="210">|
+<img src="https://github.com/Karandeep98/Weather/blob/master/screenshots/Screenshot%20(262).png"  width="210">|
+<img src="https://github.com/Karandeep98/Weather/blob/master/screenshots/Screenshot%20(263).png"  width="210">|
+<img src="https://github.com/Karandeep98/Weather/blob/master/screenshots/Screenshot%20(267).png"  width="210">|
+<img src="https://github.com/Karandeep98/Weather/blob/master/screenshots/Screenshot%20(266).png"  width="210">|
 
 
 ### Found this project useful? :heart:
