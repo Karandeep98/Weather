@@ -24,10 +24,10 @@
  <img align="right"  src="https://github.com/Karandeep98/Weather/blob/master/screenshots/record3.gif" width="220" height="460"  />
   </p>
 
-<p align="center">
-<img align="left"  src="https://github.com/Karandeep98/Weather/blob/master/screenshots/record4.gif" width="220" height="460"  />|
+
+<img  style=" margin-left: 250px;" src="https://github.com/Karandeep98/Weather/blob/master/screenshots/record4.gif" width="220" height="460"  />|
   <img src="https://github.com/Karandeep98/Weather/blob/master/screenshots/record5.gif" width="220" height="460" />|
-  </p>
+  
   
 # Screenshots
 
